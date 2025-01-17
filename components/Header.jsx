@@ -3,9 +3,11 @@ import { SignedIn,SignedOut,SignInButton,UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from './ui/button'
-import { LayoutDashboard } from 'lucide-react'
+import { LayoutDashboard, PenBox } from 'lucide-react'
+import { checkUser } from '@/lib/checkUser'
 
-const Header = () => {
+const Header = async() => {
+  await checkUser();
   return (
     <div className='fixed top-0 w-full  backdrop-blur-md z-50  bg-white/80 '>
     <nav className='flex justify-between items-center outline outline-1 px-2 py-2'>
@@ -19,6 +21,11 @@ const Header = () => {
                 <LayoutDashboard className='inline'></LayoutDashboard>
               <span className='sm:hidden md:inline'>dashboard</span></span>
             </Link>
+            <Link href='/transaction'>
+            <span>
+                <PenBox className='inline'></PenBox>
+              <span className='sm:hidden md:inline'>transaction</span></span>
+            </Link>
           </SignedIn>
           <SignedOut>
             <SignInButton forceRedirectUrl='/dashboard'>
@@ -26,7 +33,11 @@ const Header = () => {
             </SignInButton>
           </SignedOut>
           <SignedIn>
-            <UserButton />
+            <UserButton  appearance={{
+              elements:{
+                avatarBox:'w-10 h-10 rounded-[30%]'
+              }
+            }}/>
           </SignedIn>
           </div>
           </nav>
