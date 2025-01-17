@@ -39,12 +39,12 @@ const HeroSection = () => {
 
          </p>
          <div className='flex  gap-5'>
-            <Link href='https://www.youtube.com/watch?v=egS6fnZAdzk&t=2067s'>
+            <Link href='https://www.youtube.com'>
                 <Button size='lg' className='px-8'>
                     Get started
                 </Button>
             </Link>
-            <Link href='https://www.youtube.com/watch?v=egS6fnZAdzk&t=2067s'>
+            <Link href='https://www.instagram.com/sad___boy___mad/'>
                 <Button size='lg' className='px-8' variant='outline'>
                     watch demo
                 </Button>
