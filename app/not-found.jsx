@@ -28,7 +28,7 @@ const NotFound = () => {
         <h3>Sorry we can't find what you are looking for 'cuz it's so dark in here</h3>
       </div>
       <div className="torch" style={{ top: position.top, left: position.left }}></div>
-      <Link href='/home' className=' z-50 w-fit'><Button className='bg-green-50 text-black'>return home</Button></Link>
+      <Link href='/' className=' z-50 w-fit'><Button className='bg-green-50 text-black'>return home</Button></Link>
     </div>
   );
 };
