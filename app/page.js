@@ -11,11 +11,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import Email from "@/emails/template";
 
 export default function Home() {
   return (
     <div className="text-center">
       welcome to management app
+      
       <HeroSection></HeroSection>
       <section>
         <div className="text-center mt-4 bg-green-300 text-2xl font-bold text-red-900">
